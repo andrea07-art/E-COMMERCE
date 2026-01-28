@@ -1,0 +1,189 @@
+/* RESET BASE */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6f8;
+    color: #333;
+    padding: 30px;
+}
+
+/* TITOLI */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1e293b;
+}
+
+h2 {
+    margin-top: 40px;
+    margin-bottom: 15px;
+    color: #1e293b;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* SELECT + BUTTON */
+select {
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+button {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 6px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+button:hover {
+    background: #1e40af;
+}
+
+/* VETRINA PRODOTTI */
+.griglia {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+}
+
+.prodotto {
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.prodotto:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+}
+
+.prodotto h4 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #111827;
+}
+
+.prodotto p {
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* CARRELLO */
+#carrelloLista {
+    list-style: none;
+    background: white;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
+
+#carrelloLista li {
+    padding: 8px 0;
+    border-bottom: 1px solid #eee;
+}
+
+#carrelloLista li:last-child {
+    border-bottom: none;
+}
+
+#totaleCarrello {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #16a34a;
+}
+
+/* MODALE */
+.modale {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modale.hidden {
+    display: none;
+}
+
+.modale-contenuto {
+    background: white;
+    padding: 25px;
+    width: 360px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    animation: pop 0.25s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.modale-contenuto h2 {
+    margin-bottom: 10px;
+}
+
+.modale-contenuto p {
+    margin-bottom: 10px;
+}
+
+.chiudi {
+    float: right;
+    font-size: 26px;
+    cursor: pointer;
+    color: #999;
+    transition: 0.2s;
+}
+
+.chiudi:hover {
+    color: #000;
+}
+
+/* BOTTONE CARRELLO MODALE */
+#btnCarrello {
+    width: 100%;
+    margin-top: 15px;
+    background: #16a34a;
+}
+
+#btnCarrello:hover {
+    background: #15803d;
+}
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #333;
+    padding: 30px;
+
+    /* SFONDO FIGO */
+    background:
+        radial-gradient(circle at top left, #dbeafe, transparent 40%),
+        radial-gradient(circle at bottom right, #fde68a, transparent 40%),
+        linear-gradient(135deg, #f8fafc, #eef2ff);
+}

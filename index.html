@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>E-Commerce</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <h1>E-COMMERCE </h1>
+
+    <h3>Seleziona una marca:</h3>
+    <select id="marcaSelect">
+        <option value="">-- scegli --</option>
+        <option>Samsung</option>
+        <option>Apple</option>
+        <option>Sony</option>
+    </select>
+
+    <button onclick="caricaProdotti()">Mostra Prodotti</button>
+
+    <div id="vetrina" class="griglia"></div>
+
+    <h2>Carrello</h2>
+    <ul id="carrelloLista"></ul>
+    <p id="totaleCarrello">Totale: €0</p>
+
+    <button onclick="generaPDF()">Stampa Scontrino PDF</button>
+
+    <!-- MODALE DESCRIZIONE PRODOTTO -->
+    <div id="modale" class="modale hidden">
+        <div class="modale-contenuto">
+            <span class="chiudi" onclick="chiudiModale()">&times;</span>
+
+            <h2 id="modaleNome"></h2>
+            <p><strong>Prezzo:</strong> €<span id="modalePrezzo"></span></p>
+            <p id="modaleDescrizione"></p>
+
+            <button id="btnCarrello">Aggiungi al carrello</button>
+        </div>
+    </div>
+
+</body>
+</html>

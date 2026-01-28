@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Scontrino</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: #f9f9f9;
+            color: #111;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background: #2563eb;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f1f5f9;
+        }
+
+        tfoot td {
+            font-weight: bold;
+        }
+
+        #stampaBtn {
+            padding: 10px 20px;
+            background: #16a34a;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        #stampaBtn:hover {
+            background: #15803d;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Scontrino</h1>
+
+    <table id="tabellaScontrino">
+        <thead>
+            <tr>
+                <th>Prodotto</th>
+                <th>Prezzo (€)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Prodotti inseriti da script -->
+        </tbody>
+        <tfoot>
+            <tr>
+                <td>Totale</td>
+                <td id="totale">0</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <button id="stampaBtn" onclick="window.print()">Stampa</button>
+
+    <script>
+        // Recupera i prodotti dal localStorage
+        const carrello = JSON.parse(localStorage.getItem("carrello")) || [];
+
+        const tbody = document.querySelector("#tabellaScontrino tbody");
+        let totale = 0;
+
+        carrello.forEach(p => {
+            const tr = document.createElement("tr");
+            tr.innerHTML = `<td>${p.nome}</td><td>${parseFloat(p.prezzo).toFixed(2)}</td>`;
+            tbody.appendChild(tr);
+            totale += parseFloat(p.prezzo);
+        });
+
+        document.getElementById("totale").textContent = totale.toFixed(2);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,13 @@
+<prodotti>
+  <prodotto>
+    <marca>Samsung</marca>
+    <nome>Galaxy S23</nome>
+    <prezzo>899</prezzo>
+  </prodotto>
+
+  <prodotto>
+    <marca>Apple</marca>
+    <nome>iPhone 15</nome>
+    <prezzo>1099</prezzo>
+  </prodotto>
+</prodotti>
