@@ -5,9 +5,33 @@
     <prezzo>899</prezzo>
   </prodotto>
 
+    <prodotto>
+    <marca>Samsung</marca>
+    <nome>Galaxy Tab S9</nome>
+    <prezzo>799</prezzo>
+  </prodotto>
+  
   <prodotto>
     <marca>Apple</marca>
     <nome>iPhone 15</nome>
     <prezzo>1099</prezzo>
   </prodotto>
-</prodotti>
+
+  <prodotto>
+    <marca>Apple</marca>
+    <nome>MacBook Air M3</nome>
+    <prezzo>1450</prezzo>
+  </prodotto>
+  
+
+  <prodotto>
+    <marca>Sony</marca>
+    <nome>Bravia X90J</nome>
+    <prezzo>1200</prezzo>
+  </prodotto>
+
+  <prodotto>
+    <marca>Sony</marca>
+    <nome>Playstation 5</nome>
+    <prezzo>549</prezzo>
+  </prodotto>
